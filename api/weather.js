@@ -11,10 +11,10 @@ export default async function handler(req, res) {
   try {
     const { cidade, tipo = 'current', days = 2, date = 'today' } = req.query;
     const API_KEY = process.env.WEATHER_API_KEY;
-    
-    if (!API_KEY) {
-      return res.status(500).json({ error: 'API key não configurada' });
-    }
+
+if (!API_KEY) {
+  return res.status(500).json({ error: 'API key não configurada' });
+}
 
     let url;
     
